@@ -1,7 +1,7 @@
-# RAG-enhanced OpenClew Workflow Optimization
+# RAG-enhanced OpenClaw Workflow Optimization
 
 ## 项目简介
-本项目针对OpenClew智能体框架在复杂任务执行中的核心痛点：
+本项目针对OpenClaw智能体框架在复杂任务执行中的核心痛点：
 - 背景上下文占比约95%，初始核心指令仅约占5%，智能体易遗忘初始需求
 - 海量上下文输入导致token消耗高、模型响应慢、输出准确率低
 
@@ -13,7 +13,7 @@
 3. **效率双提升**：显著降低token消耗，提升模型响应速度与任务执行准确率
 
 ## 技术栈
-- **核心框架**：LangChain、OpenClew
+- **核心框架**：LangChain、OpenClaw
 - **向量数据库**：Chroma
 - **大模型**：GPT-3.5-turbo
 - **开发语言**：Python
@@ -21,7 +21,7 @@
 ## 文件结构
 ```plaintext
 ├── .env                # 环境变量配置（OpenAI API Key）
-├── openclew_baseline.py # 复现原版OpenClew上下文爆炸痛点
+├── openclaw_baseline.py # 复现原版OpenClaw上下文爆炸痛点
 ├── rag_optimizer.py    # RAG动态上下文优化核心模块
 ├── compare_test.py     # 优化前后对比实验脚本
 ├── requirements.txt    # 项目依赖包
@@ -42,8 +42,8 @@ OPENAI_API_KEY=your_api_key_here
 
 3. 运行脚本
 ```bash
-# 复现原版OpenClew痛点
-python openclew_baseline.py
+# 复现原版OpenClaw痛点
+python openclaw_baseline.py
 
 # 运行RAG优化版本
 python rag_optimizer.py
@@ -53,7 +53,7 @@ python compare_test.py
 ```
 
 ## 实验结果
-| 指标               | 原版OpenClew | RAG优化版 | 优化效果         |
+| 指标               | 原版OpenClaw | RAG优化版 | 优化效果         |
 |--------------------|--------------|-----------|------------------|
 | Token消耗          | 高（约15800）   | 低（约11400） | 减少约30%     |
 | 平均响应速度       | 22.8s         | 15.6s      | 提升约30%       |
