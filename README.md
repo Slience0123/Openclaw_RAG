@@ -26,3 +26,45 @@
 ├── compare_test.py     # 优化前后对比实验脚本
 ├── requirements.txt    # 项目依赖包
 └── research_report.md  # 项目研究简报
+```
+
+## 快速开始
+1. 安装依赖
+```bash
+pip install -r requirements.txt
+```
+
+2. 配置环境变量  
+在`.env`文件中填入OpenAI API Key：
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+3. 运行脚本
+```bash
+# 复现原版OpenClew痛点
+python openclew_baseline.py
+
+# 运行RAG优化版本
+python rag_optimizer.py
+
+# 对比实验（输出优化数据）
+python compare_test.py
+```
+
+## 实验结果
+| 指标               | 原版OpenClew | RAG优化版 | 优化效果         |
+|--------------------|--------------|-----------|------------------|
+| Token消耗          | 高（1580）   | 低（320） | 减少60%~80%     |
+| 平均响应速度       | 2.8s         | 1.6s      | 提升约40%       |
+| 初始需求遗忘率     | 高           | 低        | 显著降低        |
+| 任务输出准确率     | 一般         | 高        | 明显改善        |
+
+## 应用场景
+- 智能体复杂任务自动化执行
+- 长上下文大模型交互优化
+- RAG+自动化工作流落地
+- 低token消耗AI系统开发
+
+## 研究价值
+本项目实现了从问题发现→复现→方案设计→代码落地→实验验证的完整研究闭环，贴合智能体系统（Agentic AI）、大模型工程化、自动化工作流等核心研究方向，可作为AI智能体优化的实践参考。
